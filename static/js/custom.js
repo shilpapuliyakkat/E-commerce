@@ -43,6 +43,7 @@ $(document).ready(function () {
 
             },
             success: function (response) {
+                console.log("asdfghj");
                 alertify.success(response.status)
 
             }
@@ -63,7 +64,7 @@ $(document).ready(function () {
                 csrfmiddlewaretoken: token
             },
             success: function (response) {
-                alertify.success(response.status)
+                alertify.error(response.status);
                 $('.cartdata').load(location.href + " .cartdata");
             }
         });
@@ -84,7 +85,7 @@ $(document).ready(function () {
 
             },
             success: function (response) {
-                alertify.success(response.status)
+                alertify.success(response.status);
             }
         });
 
